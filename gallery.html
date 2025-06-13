@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Bent Cypress Homestead</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&family=Noto+Sans+JP:wght@400;700&family=Knewave&display=swap" rel="stylesheet">
+    <style>
+        /* This is the exact same styling from your index.html to keep the look consistent! */
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(160deg, #FF7F50 0%, #FFA500 12%, #FFD700 25%, #E64A19 40%, #C2185B 55%, #2E8B57 75%, #006400 90%, #004d00 100%);
+            color: #FFF8DC;
+            position: relative;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 1200'%3E%3Cdefs%3E%3Cfilter id='f1' x='-0.1' y='-0.1' width='1.2' height='1.2'%3E%3CfeGaussianBlur stdDeviation='1.5'/%3E%3C/filter%3E%3C/defs%3E%3Cg opacity='0.06' fill='%23FFF8DC'%3E%3Cpath d='M100,1190 Q90,1000 100,800 T100,600 Q110,400 100,200 T100,10 L90,10 Q90,200 80,400 T90,600 Q80,800 90,1000 T100,1190Z'/%3E%3Cellipse cx='100' cy='150' rx='80' ry='40' transform='rotate(-5 100 150)'/%3E%3Cellipse cx='100' cy='250' rx='90' ry='50' transform='rotate(5 100 250)'/%3E%3Cellipse cx='100' cy='360' rx='100' ry='60' transform='rotate(-3 100 360)'/%3E%3Cellipse cx='100' cy='480' rx='95' ry='55' transform='rotate(4 100 480)'/%3E%3Cellipse cx='100' cy='600' rx='85' ry='50' transform='rotate(-6 100 600)'/%3E%3Cellipse cx='100' cy='720' rx='70' ry='40' transform='rotate(2 100 720)'/%3E%3Cellipse cx='100' cy='830' rx='60' ry='35' transform='rotate(-4 100 830)'/%3E%3Cellipse cx='100' cy='930' rx='50' ry='30' transform='rotate(3 100 930)'/%3E%3Cpath d='M60,200 Q70,280 55,350 T65,420' stroke='%23FFF8DC' stroke-width='3' fill='none' filter='url(%23f1)'/%3E%3Cpath d='M140,300 Q130,390 145,460 T135,530' stroke='%23FFF8DC' stroke-width='3' fill='none' filter='url(%23f1)'/%3E%3Cpath d='M70,500 Q80,570 65,640' stroke='%23FFF8DC' stroke-width='2' fill='none' filter='url(%23f1)'/%3E%3Cpath d='M130,620 Q120,690 135,760' stroke='%23FFF8DC' stroke-width='2' fill='none' filter='url(%23f1)'/%3E%3C/g%3E%3C/svg%3E");
+            background-repeat: repeat-x; background-position: center top; background-size: auto 100%;
+        }
+        .hero-font { font-family: 'Yuji Syuku', serif; }
+        .section-title {
+            font-family: 'Knewave', cursive;
+            @apply text-6xl md:text-7xl font-bold mb-16 text-center relative tracking-wider;
+            color: #FFFDE7; text-shadow: 3px 3px 0px #C2185B, 6px 6px 0px rgba(0,0,0,0.4);
+        }
+        footer {
+            background-color: rgba(0, 50, 0, 0.6); color: #FFDAB9; backdrop-filter: blur(6px);
+            border-top: 1px solid rgba(255, 215, 0, 0.25); padding-top: 2rem; padding-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="selection:bg-amber-500 selection:text-white">
+
+    <header class="py-10">
+        <div class="container mx-auto text-center">
+            <a href="index.html" class="text-4xl md:text-5xl hero-font inline-block" style="color: #FFD700; text-shadow: 2px 2px 6px rgba(0,0,0,0.7);">
+                Bent Cypress Homestead
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <h1 class="section-title">Photo Gallery</h1>
+        
+        <!-- To add more photos, just copy one of the 'divs' below and paste it in the grid. -->
+        <!-- Then, change the src="images/your-new-image.jpg" and the alt="description of the new image". -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
+            <div class="aspect-square rounded-2xl overflow-hidden shadow-xl border-2 border-amber-500 border-opacity-20 hover:border-red-500 hover:border-opacity-60 transition-all duration-300 transform hover:scale-105">
+                <img src="images/redgolden1.jpg" alt="A magnificent Red Golden Pheasant stands in the grass, its vibrant red and gold plumage shining in the sunlight." class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square rounded-2xl overflow-hidden shadow-xl border-2 border-amber-500 border-opacity-20 hover:border-red-500 hover:border-opacity-60 transition-all duration-300 transform hover:scale-105">
+                <img src="images/redgolden5.jpg" alt="A pair of Red Golden Pheasants, with the male displaying his brilliant red and gold feathers next to a hen." class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square rounded-2xl overflow-hidden shadow-xl border-2 border-amber-500 border-opacity-20 hover:border-red-500 hover:border-opacity-60 transition-all duration-300 transform hover:scale-105">
+                <img src="images/melanchicks.jpg" alt="A group of fluffy, black Melanistic pheasant chicks huddled together in a brooder with wood shavings." class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square rounded-2xl overflow-hidden shadow-xl border-2 border-amber-500 border-opacity-20 hover:border-red-500 hover:border-opacity-60 transition-all duration-300 transform hover:scale-105">
+                <img src="images/courtnixquail.jpg" alt="A covey of Coturnix quail on the ground, their speckled brown feathers providing camouflage." class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square rounded-2xl overflow-hidden shadow-xl border-2 border-amber-500 border-opacity-20 hover:border-red-500 hover:border-opacity-60 transition-all duration-300 transform hover:scale-105">
+                <img src="images/babytrio.jpg" alt="Three young Red Golden pheasant chicks with developing feathers exploring their surroundings." class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square rounded-2xl overflow-hidden shadow-xl border-2 border-amber-500 border-opacity-20 hover:border-red-500 hover:border-opacity-60 transition-all duration-300 transform hover:scale-105">
+                <img src="images/redgoldenchicks.jpg" alt="A clutch of newly hatched Red Golden pheasant chicks, small and downy, in a brooder." class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square rounded-2xl overflow-hidden shadow-xl border-2 border-amber-500 border-opacity-20 hover:border-red-500 hover:border-opacity-60 transition-all duration-300 transform hover:scale-105">
+                <img src="images/meleggs.jpg" alt="Several pale, greenish-blue Melanistic pheasant eggs nestled in an incubator tray." class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square rounded-2xl overflow-hidden shadow-xl border-2 border-amber-500 border-opacity-20 hover:border-red-500 hover:border-opacity-60 transition-all duration-300 transform hover:scale-105">
+                <img src="images/sunsetrose.jpg" alt="A single, vibrant pink rose silhouetted against the warm glow of a sunset on the homestead." class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square rounded-2xl overflow-hidden shadow-xl border-2 border-amber-500 border-opacity-20 hover:border-red-500 hover:border-opacity-60 transition-all duration-300 transform hover:scale-105">
+                <img src="images/billw.jpg" alt="owner of the homestead holding up a rat snake that was eating his eggs." class="w-full h-full object-cover"> 
+        </div>
+    </main>
+
+    <footer class="mt-16 text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-sm">&copy; <span id="currentYear"></span> Bent Cypress Homestead. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
